@@ -8,11 +8,15 @@ git clone https://github.com/ritish78/Storage-Drive.git
 ````
 
 2. Once the files is in your system, you can open it in IDE of your choice with `Maven`.
-3. You can start the `StorageDriveApplication.java` or in terminal you can type:
+3. In the terminal of IDE, type:
+````
+mvn clean install
+````
+4. Then, you can start the `StorageDriveApplication.java` or in terminal you can type:
 ````
 mvn spring-boot:run
 ````
-4. Then the embedded server `Tomcat`, will start the application on port `9000`.
+5. Then the embedded server `Tomcat`, will start the application on port `9000`.
 
 # End Points available:
 * For `User`: 
@@ -32,9 +36,13 @@ mvn spring-boot:run
   * `POST` /credential/new
   *  `GET` /credential/delete
   *  `GET` /credential
+
+# Class Diagram:
+![data diagram 2nd](https://user-images.githubusercontent.com/36816476/108646490-2b35c900-750a-11eb-9bae-a0767bec02a0.PNG)
+
   
-  # Usage:
-  * Going to `http://localhost:9000` in web browser. We get the `Login` page as default page.
+# Usage:
+* Going to `http://localhost:9000` in web browser. We get the `Login` page as default page.
   ![Login Screen Default page](https://user-images.githubusercontent.com/36816476/108612353-1ee33a80-743c-11eb-9d6b-aa95e5908c4a.PNG)
 
 * Filling details in `Sign Up` page:
