@@ -47,6 +47,15 @@ public class NoteController {
 
         Long currentUserId = userService.getCurrentUserId();
 
+        //Checking to see if the note to be deleted is under the current user
+        //First, getting the note to be deleted
+        Note noteByNoteId = noteService.getNoteByNoteId(noteId);
+        //Then, if the note is NOT under the current user, then we don't delete the note
+        if (noteByNoteId.getUserId() != currentUserId) {
+            model.addAttribute("result", "error");
+            return "result";
+        }
+
 
         if (currentUserId != null && noteId != null) {
             int noOfDeletedNote = noteService.deleteNoteById(noteId);

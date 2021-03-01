@@ -19,10 +19,6 @@ public interface CredentialRepository {
     @Select("SELECT * FROM CREDENTIAL WHERE userId = #{userId}")
     List<Credential> findCredentialByUserId(Long userId);
 
-    /**
-     * We might need to change addCredential parameters to just Credential instead of Credential and userId
-     * UPDATE: Changed!
-     */
 
     @Insert("INSERT INTO CREDENTIAL (url, username, password, key, userId) VALUES (#{url}, #{username}, #{password}, #{key}, #{userId})")
     @Options(useGeneratedKeys = true, keyProperty = "credentialId")

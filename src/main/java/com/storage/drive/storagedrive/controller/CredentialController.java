@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.List;
+
 @Controller
 public class CredentialController {
 
@@ -47,6 +49,16 @@ public class CredentialController {
     public String deleteCredential(@ModelAttribute("credential") Credential credential, @RequestParam(required = false, name = "credentialId") Long credentialId,
                                    Model model) {
         Long currentUserId = userService.getCurrentUserId();
+
+        //Checking to see if to be deleted credential belongs to the current user
+        //First, getting the credential to be deleted
+        Credential credentialById = credentialService.getCredentialById(credentialId);
+        //Then, if the credential is NOT under the current user, then we don't delete the credential
+        if (credentialById.getUserId() != currentUserId) {
+            model.addAttribute("result", "error");
+            return "result";
+        }
+
 
         if (currentUserId != null && credentialId != null) {
             int noOfDeletedCredential = credentialService.deleteCredentialById(credentialId);

@@ -94,6 +94,14 @@ public class FileController {
     public String deleteFile(@RequestParam(required = false, name = "fileId") Long fileId, Model model) {
         Long currentUserId = userService.getCurrentUserId();
 
+        //Checking to see if the file to be deleted is under the current user
+        //First, getting the file to be deleted
+        File fileByFileId = fileService.getFileByFileId(fileId);
+        //Then, if the file is NOT under the current user, then we don't delete the file
+        if (fileByFileId.getUserId() != currentUserId) {
+            model.addAttribute("result", "error");
+            return "result";
+        }
 
         if (currentUserId != null && fileId != null) {
             int noOfDeletedFile = fileService.deleteFileByFileId(fileId);

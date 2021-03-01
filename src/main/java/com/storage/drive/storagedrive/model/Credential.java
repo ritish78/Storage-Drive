@@ -1,8 +1,6 @@
 package com.storage.drive.storagedrive.model;
 
 
-import com.storage.drive.storagedrive.services.EncryptionService;
-
 public class Credential {
 
     private Long credentialId;
@@ -13,7 +11,6 @@ public class Credential {
     private String key;
     private Long userId;
 
-    private EncryptionService encryptionService;
 
     public Credential() {
     }
