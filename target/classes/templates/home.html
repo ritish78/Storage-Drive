@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/bootstrap.min.css}">
+<!--    <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/home.css}">-->
 
     <title>Home</title>
 </head>
@@ -32,7 +33,7 @@
                                 <label for="fileUpload">Upload a New File:</label>
                             </div>
                             <div class="col-sm-6">
-                                <input type="file" class="form-control-file" id="fileUpload" name="fileUpload">
+                                <input type="file" class="custom-file-input" id="fileUpload" name="fileUpload">
                             </div>
                             <div class="col-sm-4">
                                 <button type="submit" class="btn btn-dark">Upload</button>
@@ -45,7 +46,8 @@
                         <thead>
                         <tr>
                             <th style="width: 20%" scope="col"></th>
-                            <th style="width: 80%" scope="col">File Name</th>
+                            <th style="width: 55%" scope="col">File Name</th>
+                            <th style="width: 25%" scope="col">Upload Date</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -55,6 +57,7 @@
                                 <a class="btn btn-danger" th:href="@{/file/delete?fileId={fileId}(fileId=${file.getFileId()})}">Delete</a>
                             </td>
                             <th scope="row" th:text="${file.getFileName()}"></th>
+                            <th scope="row" th:text="${file.getFileUploadDateInString()}"></th>
                         </tr>
                         </tbody>
                     </table>

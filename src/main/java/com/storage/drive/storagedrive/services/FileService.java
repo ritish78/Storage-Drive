@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -60,6 +61,7 @@ public class FileService {
             newFile.setFileData(multipartFile.getBytes());
             newFile.setFileSize(multipartFile.getSize());
             newFile.setUserId(userId);
+            newFile.setFileUploadDateTime(LocalDateTime.now());
 
             int noOfAddedFile = fileRepository.addFile(newFile);
             logger.info(String.format("Adding %d file for User ID: %d", noOfAddedFile, userId));

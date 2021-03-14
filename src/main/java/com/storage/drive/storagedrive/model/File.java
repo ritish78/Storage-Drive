@@ -1,6 +1,8 @@
 package com.storage.drive.storagedrive.model;
 
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
 
 
@@ -11,7 +13,10 @@ public class File {
     private String contentType;
     private Long fileSize;
     private byte[] fileData;
+    private LocalDateTime fileUploadDateTime;
     private Long userId;
+
+    public static final String DATE_TIME_FORMATTER = "yyyy-MM-dd";
 
     public File() {
     }
@@ -23,6 +28,7 @@ public class File {
         this.fileSize = fileSize;
         this.fileData = fileData;
         this.userId = userId;
+        fileUploadDateTime = fileUploadDateTime.now();
     }
 
     public Long getFileId() {
@@ -71,6 +77,18 @@ public class File {
 
     public void setUserId(Long userId) {
         this.userId = userId;
+    }
+
+    public LocalDateTime getFileUploadDateTime() {
+        return fileUploadDateTime;
+    }
+
+    public String getFileUploadDateInString() {
+        return this.fileUploadDateTime.format(DateTimeFormatter.ofPattern(DATE_TIME_FORMATTER));
+    }
+
+    public void setFileUploadDateTime(LocalDateTime fileUploadDateTime) {
+        this.fileUploadDateTime = fileUploadDateTime;
     }
 
     @Override

@@ -22,7 +22,7 @@ public interface FileRepository {
     @Select("SELECT * FROM FILE WHERE fileName = #{fileName}")
     File getFileByFileName(String fileName);
 
-    @Insert("INSERT INTO FILE (fileName, contentType, fileSize, fileData, userId) VALUES (#{fileName}, #{contentType}, #{fileSize}, #{fileData}, #{userId})")
+    @Insert("INSERT INTO FILE (fileName, contentType, fileSize, fileData, fileUploadDateTime, userId) VALUES (#{fileName}, #{contentType}, #{fileSize}, #{fileData}, #{fileUploadDateTime}, #{userId})")
     @Options(useGeneratedKeys = true, keyProperty = "fileId")
     int addFile(File file);
 

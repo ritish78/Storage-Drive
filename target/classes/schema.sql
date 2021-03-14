@@ -20,6 +20,7 @@ CREATE TABLE IF NOT EXISTS FILE (
     fileName VARCHAR,
     contentType VARCHAR,
     fileSize VARCHAR,
+    fileUploadDateTime DATE,
     userId INT,
     fileData BLOB,
     foreign key (userId) references USERS(userId)
