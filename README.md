@@ -1,5 +1,5 @@
 # Storage-Drive
-A web application to upload files, notes and store username and password for different websites
+A web application to upload files, notes and store username and password for different websites. This project is under development. Selenium Webdriver will be added. 
 
 # How to install:
 1. Using terminal clone this repo by this command:
