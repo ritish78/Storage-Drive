@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Error</title>
@@ -8,7 +8,10 @@
     <div class="container">
         <h1>Oops! Something went wrong! Please check the url.</h1>
         <hr>
-        <a href="/home">Home Page</a>
+        <div style="width: 30%; margin: auto">
+            <img th:src="@{/svg/404.svg}" height="300" width="375">
+            <a href="/home">Home Page</a>
+        </div>
     </div>
 </body>
 </html>

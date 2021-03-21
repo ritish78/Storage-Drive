@@ -14,14 +14,29 @@
         <h1 class="display-5">Success</h1>
         <span>Your changes were successfully saved. Click <a href="/home">here</a> to continue.</span>
     </div>
+    <div th:if="${result == 'success'}">
+        <div style="width: 40%; margin: auto">
+            <img th:src="@{/svg/changesMade.svg}" height="300" width="375">
+        </div>
+    </div>
     <div class="alert alert-danger fill-parent" th:if="${result == 'notSaved'}">
         <h1 class="display-5">Error</h1>
         <span>Your changes were not saved. Click <a href="/home">here</a> to continue.</span>
+    </div>
+    <div th:if="${result == 'notSaved'}">
+        <div style="width: 40%; margin: auto">
+            <img th:src="@{/svg/500.svg}" height="300" width="375">
+        </div>
     </div>
     <div class="alert alert-danger fill-parent" th:if="${result == 'error'}">
         <h1 class="display-5">Error</h1>
         <span th:text="${message}"></span>
         <span>Click <a href="/home">here</a> to continue.</span>
+    </div>
+    <div th:if="${result == 'error'}">
+        <div style="width: 40%; margin: auto">
+            <img th:src="@{/svg/unsuccessful.svg}" height="300" width="375">
+        </div>
     </div>
 </div>
 </body>
