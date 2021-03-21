@@ -52,7 +52,8 @@ mvn spring-boot:run
 ![Signing up successfully](https://user-images.githubusercontent.com/36816476/108612378-741f4c00-743c-11eb-85c9-200a99d763a3.PNG)
 
 * `Home` page after we sign in with correct credentials:
-![Home Page after signing in](https://user-images.githubusercontent.com/36816476/108612400-90bb8400-743c-11eb-8c9a-7bbacd2097e8.PNG)
+![Adding upload date to the UI](https://user-images.githubusercontent.com/36816476/111060842-f4911400-84f3-11eb-8bab-5a41eea15dee.PNG)
+
 
 * We can't get to the `Home` page if we provide incorrect details:
 ![Wrong username or password](https://user-images.githubusercontent.com/36816476/108612430-d0826b80-743c-11eb-9364-85a6e9dd0349.PNG)
@@ -63,7 +64,7 @@ mvn spring-boot:run
 * We get this screen if the file upload is successful:
 ![Upload successful](https://user-images.githubusercontent.com/36816476/108612463-1f300580-743d-11eb-8f25-11e0a9c2fbeb.PNG)
 
-* Adding more files:
+* Adding more files: NOTE: We should see the upload date of the File. That feature was added later.
 ![Adding more files](https://user-images.githubusercontent.com/36816476/108612480-3e2e9780-743d-11eb-9d6e-aa21e7cd1714.PNG)
 
 * Cliking on `Download` button of the first file will download the file into the local machine:
