@@ -51,12 +51,12 @@ mvn spring-boot:run
  ![login screen](https://user-images.githubusercontent.com/36816476/112091395-5f73d680-8be9-11eb-9fa3-535f7147667d.PNG)
 
 * Filling details in `Sign Up` page:
-![Filling details in Sign Up screen](https://user-images.githubusercontent.com/36816476/108612359-40442680-743c-11eb-8428-b12289d142b1.PNG)
+![Filling details in sign up page](https://user-images.githubusercontent.com/36816476/112092185-1c1a6780-8beb-11eb-897b-bfd95e9768a3.PNG)
 
 * We signed up successfully it redirects to `login` page and then filling the details in `login` page:
 ![after signing up](https://user-images.githubusercontent.com/36816476/112091427-71ee1000-8be9-11eb-9946-4226bc497e04.PNG)
 
-* `Home` page after we sign in with correct credentials:
+* `Home` page after we sign in with correct credentials. This screenshot includes the name of the user logged in. Haven't changed other screenshots to adjust for inclusion of username in screenshot in the new update:
 ![Home page after entering correct details](https://user-images.githubusercontent.com/36816476/112091479-96e28300-8be9-11eb-8420-b328e7a2c0c5.PNG)
 
 
