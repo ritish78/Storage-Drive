@@ -67,40 +67,40 @@ mvn spring-boot:run
 ![Adding first file](https://user-images.githubusercontent.com/36816476/108612453-045d9100-743d-11eb-8890-0b0e8786b748.PNG)
 
 * We get this screen if the file upload is successful:
-![Upload successful](https://user-images.githubusercontent.com/36816476/108612463-1f300580-743d-11eb-8f25-11e0a9c2fbeb.PNG)
+![File Upload successfull](https://user-images.githubusercontent.com/36816476/112092198-276d9300-8beb-11eb-8b39-24c1ec528ae4.PNG)
 
 * Adding more files: NOTE: We should see the upload date of the File. That feature was added later.
-![Adding more files](https://user-images.githubusercontent.com/36816476/108612480-3e2e9780-743d-11eb-9d6e-aa21e7cd1714.PNG)
+![Adding more files](https://user-images.githubusercontent.com/36816476/112092204-2b011a00-8beb-11eb-872e-cd07a4c21690.PNG)
 
 * Cliking on `Download` button of the first file will download the file into the local machine:
-![Clicking on download of the first file](https://user-images.githubusercontent.com/36816476/108612486-543c5800-743d-11eb-95b1-c28769e278d4.PNG)
+![Clicking on download button](https://user-images.githubusercontent.com/36816476/112092209-2d637400-8beb-11eb-9a1d-fe317040173f.PNG)
 
 * Clicking in `Delete` button of the first file will delete the file from database:
-![Deleting the first file which we uploaded](https://user-images.githubusercontent.com/36816476/108612512-89e14100-743d-11eb-8b15-1bb18cbf8587.PNG)
+![Clicking on delete button of file](https://user-images.githubusercontent.com/36816476/112092215-2fc5ce00-8beb-11eb-8613-339e04cf8192.PNG)
 
 * Adding file with the same file name in database will throw an error:
-![Adding file with same file name will throw error](https://user-images.githubusercontent.com/36816476/108612525-a1b8c500-743d-11eb-822c-f377b3878787.PNG)
+![Adding file with same file name in database](https://user-images.githubusercontent.com/36816476/112092223-32282800-8beb-11eb-8393-7425bd81eae0.PNG)
 
 * Adding notes: 
-![Adding notes](https://user-images.githubusercontent.com/36816476/108612530-af6e4a80-743d-11eb-87e5-599b5fd9b7ba.PNG)
+![Adding notes](https://user-images.githubusercontent.com/36816476/112092229-35231880-8beb-11eb-8ee8-06914348c165.PNG)
 
 * Adding more notes:
-![Adding more notes](https://user-images.githubusercontent.com/36816476/108612535-be54fd00-743d-11eb-8bc1-e677b62decff.PNG)
+![Adding more notes](https://user-images.githubusercontent.com/36816476/112092235-381e0900-8beb-11eb-9108-e86353f73c80.PNG)
 
 * Adding credential for other website:
-![Adding credential for another website](https://user-images.githubusercontent.com/36816476/108612540-d167cd00-743d-11eb-828a-8f182aeed764.PNG)
+![Adding credential of other website](https://user-images.githubusercontent.com/36816476/112092239-3a806300-8beb-11eb-8310-3215037429d9.PNG)
 
 * Adding more `username/email` and `password`. In this page, we let the user only see the `salted` and `hashed` password:
-![Adding more username and password](https://user-images.githubusercontent.com/36816476/108612547-e80e2400-743d-11eb-97f9-294aed4e33ca.PNG)
+![Adding more credential](https://user-images.githubusercontent.com/36816476/112092247-3d7b5380-8beb-11eb-9d50-cf2bef4a3874.PNG)
 
 * By clicking on the `Edit` button you can view the password:
-![By clicking on the Edit button you can see the password](https://user-images.githubusercontent.com/36816476/108612595-3d4a3580-743e-11eb-858d-eab283647a2b.PNG)
+![Clicking on Edit button of credential](https://user-images.githubusercontent.com/36816476/112092253-3fddad80-8beb-11eb-89b4-1b20b0c30be6.PNG)
 
 * Creating another user to test `authorization`.
-![Creating another user](https://user-images.githubusercontent.com/36816476/108612607-5652e680-743e-11eb-9c9f-0ad323db175f.PNG)
+![Another user](https://user-images.githubusercontent.com/36816476/112092256-41a77100-8beb-11eb-8600-c388c1da1359.PNG)
 
 * Empty `Home` page for new created user. One user can't view the files and other details of another user:
-![One user can't view the files and other details of another user](https://user-images.githubusercontent.com/36816476/108612624-7b475980-743e-11eb-90ed-8b362bb6edc7.PNG)
+![another user home screen](https://user-images.githubusercontent.com/36816476/112092666-17a27e80-8bec-11eb-9f38-25a51b386f4b.PNG)
 
 
 
