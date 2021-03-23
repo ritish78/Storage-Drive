@@ -1,5 +1,9 @@
 # Storage-Drive
 A web application to upload files, notes and store username and password for different websites. This project is under development. Selenium Webdriver will be added. 
+* This web app is deployed to heroku: https://storage-drive.herokuapp.com
+  * Initial load time will be more than 10 seconds as it takes time for heroku to start the web app. Heroku stops the app if we don't use the web app for more than half hour to save server time. 
+  * To test the file upload, please select the file of least size. Its best if we create a new text document with only few bytes of size.
+
 
 # How to install:
 1. Using terminal clone this repo by this command:
@@ -43,20 +47,21 @@ mvn spring-boot:run
   
 # Usage:
 * Going to `http://localhost:9000` in web browser. We get the `Login` page as default page.
-  ![Login Screen Default page](https://user-images.githubusercontent.com/36816476/108612353-1ee33a80-743c-11eb-9d6b-aa95e5908c4a.PNG)
+  * This app is also deployed to heroku. You can check it out without cloning this repo.
+ ![login screen](https://user-images.githubusercontent.com/36816476/112091395-5f73d680-8be9-11eb-9fa3-535f7147667d.PNG)
 
 * Filling details in `Sign Up` page:
 ![Filling details in Sign Up screen](https://user-images.githubusercontent.com/36816476/108612359-40442680-743c-11eb-8428-b12289d142b1.PNG)
 
 * We signed up successfully it redirects to `login` page and then filling the details in `login` page:
-![Signing up successfully](https://user-images.githubusercontent.com/36816476/108612378-741f4c00-743c-11eb-85c9-200a99d763a3.PNG)
+![after signing up](https://user-images.githubusercontent.com/36816476/112091427-71ee1000-8be9-11eb-9946-4226bc497e04.PNG)
 
 * `Home` page after we sign in with correct credentials:
-![Adding upload date to the UI](https://user-images.githubusercontent.com/36816476/111060842-f4911400-84f3-11eb-8bab-5a41eea15dee.PNG)
+![Home page after entering correct details](https://user-images.githubusercontent.com/36816476/112091479-96e28300-8be9-11eb-8420-b328e7a2c0c5.PNG)
 
 
 * We can't get to the `Home` page if we provide incorrect details:
-![Wrong username or password](https://user-images.githubusercontent.com/36816476/108612430-d0826b80-743c-11eb-9364-85a6e9dd0349.PNG)
+![Incorrect details](https://user-images.githubusercontent.com/36816476/112091530-b083ca80-8be9-11eb-8297-1983e89740f9.PNG)
 
 * Adding first file:
 ![Adding first file](https://user-images.githubusercontent.com/36816476/108612453-045d9100-743d-11eb-8890-0b0e8786b748.PNG)
