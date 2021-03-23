@@ -7,34 +7,64 @@
     <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/bootstrap.min.css}">
 
     <title>Login</title>
-</head>
-<body class="p-3 mb-2 bg-light text-black">
-<div class="container justify-content-center w-25 p-3" style="background-color: #eeeeee; margin-top: 5em;">
-    <h1 class="display-5">Login</h1>
-    <form action="#" method="POST" th:action="@{'/login'}">
-        <div class="alert alert-danger" id="error-msg" th:if="${param.error}">
-            Invalid username or password
-        </div>
-        <div class="alert alert-dark" id="logout-msg" th:if="${param.logout}">
-            You have been logged out
-        </div>
-        <div class="alert alert-dark" th:if="${signUpSuccess}">
-            You have signed up successfully! Please login!
-        </div>
-        <div class="form-group">
-            <label for="inputUsername">Username</label>
-            <input type="input" class="form-control" name="username" id="inputUsername" placeholder="Enter Username" maxlength="20" required>
-        </div>
-        <div class="form-group">
-            <label for="inputPassword">Password</label>
-            <input type="password" class="form-control" name="password" id="inputPassword" placeholder="Enter Password" maxlength="20" required>
-        </div>
-        <button type="submit" class="btn btn-primary">Login</button>
-    </form>
+    <style>
+    body {
+    /* Image credit: Markus Spiske at unsplash:
+        Link to Markus Spiske: https://unsplash.com/@markusspiske
+    */
+        background-image: url(https://images.unsplash.com/photo-1603297638322-c7a08d52966c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+    }
+    .svg-container {
+        grid-column: 1;
+    }
 
-    <div class="form-group" style="margin-top: 0.5em;">
-        <label><a id="signup-link" th:href="@{/signup}">Click here to sign up</a></label>
+    .form-container {
+        grid-column: 2;
+    }
+    </style>
+</head>
+
+<body class="p-3 mb-2 bg-light text-black">
+
+<div class="container justify-content-center"
+     style="background-color: #eeeeee; margin-top: 5em; display: grid; width: 50%">
+    <div class="svg-container">
+        <img th:src="@{/svg/loginLeft.svg}" style="width: 80%; height: 80%">
     </div>
+    <div class="form-container">
+        <h1 class="display-5">Login</h1>
+        <form action="#" method="POST" th:action="@{'/login'}">
+            <div class="alert alert-danger" id="error-msg" th:if="${param.error}">
+                Invalid username or password
+            </div>
+            <div class="alert alert-dark" id="logout-msg" th:if="${param.logout}">
+                You have been logged out
+            </div>
+            <div class="alert alert-dark" th:if="${signUpSuccess}">
+                You have signed up successfully! Please login!
+            </div>
+            <div class="form-group">
+                <label for="inputUsername">Username</label>
+                <input type="input" class="form-control" name="username" id="inputUsername" placeholder="Enter Username"
+                       maxlength="20" required>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword">Password</label>
+                <input type="password" class="form-control" name="password" id="inputPassword"
+                       placeholder="Enter Password"
+                       maxlength="20" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+
+        <div class="form-group" style="margin-top: 0.5em;">
+            <label><a id="signup-link" th:href="@{/signup}">Click here to sign up</a></label>
+        </div>
+    </div>
+
 </div>
 </body>
 </html>

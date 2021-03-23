@@ -20,6 +20,7 @@ body {
 <body class="p-3 mb-2 bg-light text-black">
 <div class="container">
     <div id="logoutDiv">
+        <p>Hi <b><i><span th:text="${username}"></span></i></b>!</p>
         <form action="#" method="POST" th:action="@{/logout}">
             <button type="submit" class="btn btn-secondary float-right">Logout</button>
         </form>

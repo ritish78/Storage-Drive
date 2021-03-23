@@ -76,5 +76,11 @@ public class UserService {
         return null;
     }
 
+    public String getCurrentUsername() {
+        String usernameById = userRepository.findUsernameById(this.getCurrentUserId());
+        logger.info("Logged in user: " + usernameById);
+        return usernameById;
+    }
+
 
 }

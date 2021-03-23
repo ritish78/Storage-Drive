@@ -65,6 +65,7 @@ public class UserController {
             userData.put("noteList", this.noteService.getAllNoteByUsedId(currentUserId));
             userData.put("credentialList", this.credentialService.getCredentialsByUserId(currentUserId));
             userData.put("fileList", this.fileService.getFilesOfUser(currentUserId));
+            userData.put("username", this.userService.getCurrentUsername());
 
             model.addAllAttributes(userData);
 

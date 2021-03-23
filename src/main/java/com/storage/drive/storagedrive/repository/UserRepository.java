@@ -28,4 +28,7 @@ public interface UserRepository {
 
     @Delete("DELETE FROM USERS WHERE username = #{username}")
     int deleteUserByUsername(String username);
+
+    @Select("SELECT username FROM USERS WHERE userId = #{userId}")
+    String findUsernameById(Long userId);
 }
