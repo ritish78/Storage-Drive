@@ -1,8 +1,5 @@
 # Storage-Drive
 A web application to upload files, notes and store username and password for different websites. This project is under development. Selenium Webdriver will be added. 
-* This web app is deployed to heroku: https://storage-drive.herokuapp.com
-  * Initial load time will be more than 10 seconds as it takes time for heroku to start the web app. Heroku stops the app if we don't use the web app for more than half hour to save server time. 
-  * To test the file upload, please select the file of least size. Its best if we create a new text document with only few bytes of size.
 
 
 # How to install:
